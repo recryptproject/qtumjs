@@ -1,26 +1,26 @@
-The QTUM JavaScript library for Smart Contract development.
+The RECRYPT JavaScript library for Smart Contract development.
 
-See [documentation](https://qtumproject.github.io/qtumjs-doc/).
+See [documentation](https://recryptproject.github.io/recryptjs-doc/).
 
-See [companion tutorial](https://github.com/qtumproject/qtumbook/blob/master/part2/erc20-js.md).
+See [companion tutorial](https://github.com/recryptproject/recryptbook/blob/master/part2/erc20-js.md).
 
 # Install
 
 ```
-npm install qtumjs
+npm install recryptjs
 ```
 
 This is a sample code snippet that transfer ERC20 tokens:
 
 ```js
 import {
-  QtumRPC,
-} from "qtumjs"
+  RecryptRPC,
+} from "recryptjs"
 
 const repoData = require("./solar.json")
-const qtum = new Qtum("http://qtum:test@localhost:3889", repoData)
+const recrypt = new Recrypt("http://recrypt:test@localhost:8489", repoData)
 
-const myToken = qtum.contract("zeppelin-solidity/contracts/token/CappedToken.sol")
+const myToken = recrypt.contract("zeppelin-solidity/contracts/token/CappedToken.sol")
 
 async function transfer(fromAddr, toAddr, amount) {
   const tx = await myToken.send("transfer", [toAddr, amount], {
@@ -35,7 +35,7 @@ async function transfer(fromAddr, toAddr, amount) {
 }
 ```
 
-The [full source code](https://github.com/qtumproject/qtumbook-mytoken-qtumjs-cli).
+The [full source code](https://github.com/recryptproject/recryptbook-mytoken-recryptjs-cli).
 
 > This example uses async/await (supported natively by Node 8+).
 
@@ -43,16 +43,16 @@ The [full source code](https://github.com/qtumproject/qtumbook-mytoken-qtumjs-cl
 
 ```
 docker run -it --rm \
-  --name qtumjs \
+  --name recryptjs \
   -v `pwd`:/dapp \
-  -p 5889:3889 \
-  hayeah/qtumportal
+  -p 5889:8489 \
+  hayeah/recryptportal
 ```
 
 Enter into container:
 
 ```
-docker exec -it qtumjs sh
+docker exec -it recryptjs sh
 ```
 
 Generate initial blocks:

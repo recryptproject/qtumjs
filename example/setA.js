@@ -1,6 +1,6 @@
-const { Contract, QtumRPC } = require("qtumjs")
+const { Contract, RecryptRPC } = require("recryptjs")
 
-const rpc = new QtumRPC("http://howard:yeh@localhost:13889")
+const rpc = new RecryptRPC("http://howard:yeh@localhost:18489")
 
 async function main() {
   // Load the ABI and address of a deployed contract

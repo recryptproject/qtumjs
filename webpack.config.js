@@ -15,9 +15,9 @@ module.exports = {
 		extensions: ['.ts', '.js']
 	},
 	output: {
-		filename: 'qtum.js',
+		filename: 'recrypt.js',
 		path: path.resolve(__dirname, 'dist'),
-		library: "Qtum",
+		library: "Recrypt",
 		libraryTarget: "umd",
 	}
 }

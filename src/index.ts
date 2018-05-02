@@ -9,7 +9,7 @@ if (typeof Buffer === "undefined") {
 
 export * from "./abi"
 export * from "./Contract"
-export * from "./QtumRPC"
-export * from "./Qtum"
+export * from "./RecryptRPC"
+export * from "./Recrypt"
 export * from "./TxReceiptPromise"
 export * from "./ethjs-abi"
